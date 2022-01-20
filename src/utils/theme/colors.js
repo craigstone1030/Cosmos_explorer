@@ -1,0 +1,31 @@
+export default {
+  primary: '#333',
+  black: '#333',
+  white: '#fff',
+  whiteGrey: '#fcfefe',
+  whiteGrey2: '#f8fafa',
+  whiteGrey3: '#f9fbfb',
+  whiteGrey4: '#f7f7f7',
+  success: '#4ed22c',
+  danger: '#e04949',
+  dangerDark: '#991a1a',
+  blue: '#476eeb',
+  blue2: '#1949e6',
+  blue3: '#1742cf',
+  blue4: '#d1dbfa',
+  blue5: '#112DA0',
+  violet: '#5c3bed',
+  grey: '#999',
+  grey2: '#555',
+
+  burgundy: '#851e3e',
+  burgundy2: '#ff5050',
+  navyBlue: '#051e3e',
+  navyBlue2: '#04192f',
+
+  bgHeaderColor: {
+    cosmos: '#332E59',
+    persistence: '#383838',
+    bitsong: '#10267EFF',
+  },
+};
