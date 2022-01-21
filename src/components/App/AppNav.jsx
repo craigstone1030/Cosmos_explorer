@@ -29,7 +29,7 @@ const AppNavUl = styled.ul`
 `;
 
 const AppNavLinkStyles = css`
-  color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.burgundy3};
   font-weight: 500;
   font-size: ${({ theme }) => theme.fs14};
   transition: color 0.2s;
@@ -37,7 +37,7 @@ const AppNavLinkStyles = css`
   &:hover,
   &:focus,
   &.active {
-    color: ${({ theme }) => theme.blue};
+    color: ${({ theme }) => theme.burgundy3};
     text-decoration: none;
     outline: none;
   }
@@ -52,7 +52,7 @@ const AppNavButtonLink = styled.button`
   background-color: transparent;
   border: none;
   padding: 0;
-  color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.burgundy3};
 `;
 
 const AppNav = () => {

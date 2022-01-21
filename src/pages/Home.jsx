@@ -4,6 +4,9 @@ import { Container } from '../components/styled/CustomBsGrid';
 import MainStats from '../components/home/MainStats';
 import MainCharts from '../components/home/MainCharts';
 // import Banner from '../components/Banner';
+import HomeBlocksTable from '../components/blocks/HomeBlocksTable';
+import HomeTransactionsTable from '../components/transactions/HomeTransactionsTable';
+
 
 const Home = () => (
   <Container>
@@ -29,9 +32,12 @@ const Home = () => (
 
     {/* <Banner /> */}
 
-    <MainStats />
-
     <MainCharts />
+    <MainStats />
+    <div style={{display: 'flex'}}>
+      <HomeBlocksTable />
+      <HomeTransactionsTable />    
+    </div>
   </Container>
 );
 

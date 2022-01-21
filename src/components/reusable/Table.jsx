@@ -29,9 +29,10 @@ const Tr = styled.tr`
 `;
 
 const Th = styled.th`
-  background-color: ${({ theme: { blue } }) => blue};
+  background-color: ${({ theme: { whtie } }) => whtie};
   position: sticky;
   top: -1px;
+  color: #555;
 `;
 
 const CellVal = styled.div`

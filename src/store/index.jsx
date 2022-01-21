@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { networkList } from '../utils/constants';
 
 const initialState = {
-  chain: { label: 'COSMOS', value: 'cosmos', coinCode: 'ATOM' },
+  chain: { label: 'Subse-testnet', value: 'testnet', coinCode: 'ATOM' },
 };
 
 const actions = {

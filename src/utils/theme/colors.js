@@ -17,12 +17,12 @@ export default {
   violet: '#5c3bed',
   grey: '#999',
   grey2: '#555',
-
   burgundy: '#851e3e',
   burgundy2: '#ff5050',
+  burgundy3: '#8f92a1',
   navyBlue: '#051e3e',
   navyBlue2: '#04192f',
-
+  accent: '#1A6AF4',
   bgHeaderColor: {
     cosmos: '#332E59',
     persistence: '#383838',

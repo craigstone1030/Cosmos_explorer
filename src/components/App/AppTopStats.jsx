@@ -17,8 +17,10 @@ const TopStatsStyled = styled.div`
   position: sticky;
   top: ${({ theme }) => theme.heightHeader};
   width: 100%;
-  background-color: ${({ theme }) => theme.white};
+  opacity: 0.8;
+  background-color: ${({ theme }) => theme.accent};
   box-shadow: ${({ theme }) => theme.shadow};
+  color: ${({ theme }) => theme.white};
   padding-top: 5px;
   padding-bottom: 5px;
   z-index: 4;
@@ -68,6 +70,7 @@ const statTitles = {
   current_price: 'Current price',
 };
 const transformMetaStats = (stats) => {
+  console.log('--------', stats)
   if (!stats || !Object.keys(stats).length) return [];
 
   return Object.keys(stats).map((stat) => ({
@@ -90,8 +93,22 @@ const AppTopStats = () => {
 
   // TODO: May need rendering all the items as if there's no data,
   //  there's no way to show appropriate "no-data" stubs
-  const metaStatsComp = useMemo(() => transformMetaStats(res.resp), [res.resp]);
-
+  
+  
+  const metaStatsComp = [
+    {
+      title: 'asdf',
+      value:'1',
+      name: "asdf",
+      id: "asdf"
+    },
+    {
+      title: 'bbbbb',
+      value:'30',
+      name: "bbb",
+      id: "ddd"
+    },    
+  ];
   return (
     <TopStatsStyled>
       <Container>
