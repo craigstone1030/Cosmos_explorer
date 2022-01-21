@@ -105,18 +105,14 @@ const socials = [
     href: 'https://www.reddit.com/r/Everstake',
   },
 ];
-const behind = [
+const about = [
   {
-    title: 'API',
+    title: 'SCALLOP',
     href: 'https://api.cosmoscan.net/api',
   },
   {
-    title: 'Front repo',
+    title: 'SCALLOP CHAIN',
     href: 'https://github.com/everstake/cosmoscan-front',
-  },
-  {
-    title: 'Back repo',
-    href: 'https://github.com/everstake/cosmoscan-api',
   },
 ];
 
@@ -189,10 +185,10 @@ const AppFooter = () => {
 
             <Col md={6} lg={3}>
               <FooterItem>
-                <FooterTitle>Behind Cosmoscan</FooterTitle>
+                <FooterTitle>About</FooterTitle>
 
                 <FooterUl>
-                  {behind.map((link) => (
+                  {about.map((link) => (
                     <li key={link.title}>
                       <FooterA
                         href={link.href}
