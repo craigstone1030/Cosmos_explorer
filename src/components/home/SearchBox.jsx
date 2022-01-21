@@ -6,7 +6,7 @@ import theme from '../../utils/theme';
 const networkList = [
   { label: 'SLCP', value: 'SLCP', coinCode: 'SLCP' },
   { label: 'All Blockchains', value: 'all', coinCode: 'All Blockchains' },
-]
+];
 
 const stylesChain = {
   container: (base) => ({
@@ -32,7 +32,7 @@ const stylesChain = {
   indicatorsContainer: (base) => ({
     ...base,
     height: 48,
-    border: 'none'
+    border: 'none',
   }),
   dropdownIndicator: (base) => ({
     ...base,
@@ -59,19 +59,17 @@ const SearchBox = () => (
         options={networkList}
         defaultValue={networkList[0]}
         onChange={(e) => {
-          console.log('hi')
+          console.log('hi');
         }}
-        styles = {stylesChain}
+        styles={stylesChain}
       />
     </FilterBox>
-    <SearchInput 
-      type="text" 
-      className="search-class" 
-      placeholder="Search Any Address, Transaction or Block" 
+    <SearchInput
+      type="text"
+      className="search-class"
+      placeholder="Search Any Address, Transaction or Block"
     />
-    <SearchButton>
-      Search
-    </SearchButton>
+    <SearchButton>Search</SearchButton>
   </SearchContainer>
 );
 
@@ -81,7 +79,7 @@ const SearchContainer = styled.div`
   border-radius: 8px;
   height: 48px;
   box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px 0px;
-`
+`;
 const SearchInput = styled.input`
   width: 100%;
   height: 48px;
@@ -91,7 +89,7 @@ const SearchInput = styled.input`
   padding-left: 10px;
   padding-right: 108px;
   border: none;
-`
+`;
 
 const FilterBox = styled.div`
   padding: 0 20px;
@@ -114,7 +112,7 @@ const FilterBox = styled.div`
   cursor: pointer;
   position: relative;
   overflow: visible;
-  width: 155px; 
+  width: 155px;
 `;
 
 const SearchButton = styled.a`
@@ -128,6 +126,6 @@ const SearchButton = styled.a`
   color: #fff;
   cursor: pointer;
   border-radius: 5px;
-`
+`;
 
 export default SearchBox;

@@ -139,7 +139,8 @@ const AppFooter = () => {
                   <AppLogo />
                 </LogoWrapper>
                 <P>
-                  Scallop Scan is a tool for inspecting and analysing Scallop Chain Transactions.
+                  Scallop Scan is a tool for inspecting and analysing Scallop
+                  Chain Transactions.
                 </P>
               </FooterItem>
             </Col>

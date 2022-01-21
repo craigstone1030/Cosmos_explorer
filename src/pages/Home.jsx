@@ -8,7 +8,6 @@ import SearchBox from '../components/home/SearchBox';
 import HomeBlocksTable from '../components/blocks/HomeBlocksTable';
 import HomeTransactionsTable from '../components/transactions/HomeTransactionsTable';
 
-
 const Home = () => (
   <Container>
     <Helmet>
@@ -35,9 +34,9 @@ const Home = () => (
     <SearchBox />
     <MainCharts />
     <MainStats />
-    <div style={{display: 'flex'}}>
+    <div style={{ display: 'flex' }}>
       <HomeBlocksTable />
-      <HomeTransactionsTable />    
+      <HomeTransactionsTable />
     </div>
   </Container>
 );

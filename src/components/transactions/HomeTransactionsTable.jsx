@@ -2,10 +2,10 @@ import React, { useContext, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 import Table from '../reusable/Table';
 import Store from '../../store';
-import LayoutPagination from '../reusable/LayoutPagination';
 import Icon from '../styled/Icon';
 import { formatToken } from '../../utils';
 
@@ -25,7 +25,7 @@ const cols = [
   {
     value: 'messages',
     label: 'Messages',
-  }
+  },
 ];
 
 const TableHeader = styled.div`
@@ -41,24 +41,18 @@ const TableHeader = styled.div`
   margin-bottom: 12px;
 `;
 
-const Table1 = styled.div`
-  max-width: 60%;
-  margin-left: 20px;
-`;
-
 const TableRow = styled.div`
   justify-content: center;
   align-items: center;
-
 `;
 
 const BigText = styled.div`
   font-weight: bold;
-`
+`;
 const Number = styled.div`
-  font-weight:normal;
+  font-weight: normal;
   margin-left: 10px;
-`
+`;
 const FontAwesomeIconDiv = styled.div`
   background-color: rgb(69, 32, 230);
   border-radius: 8px;
@@ -72,21 +66,9 @@ const FontAwesomeIconDiv = styled.div`
   flex-flow: row wrap;
   margin: 0 10px;
   color: white;
-`
-const TRow = styled.div`
-  align-items: center;
-  background-color: rgb(255, 255, 255);
-  padding: 20px 24px;
-  border-radius: 8px;
-  box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px 0px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-`
-const BlockHash = styled.div`
-  font-weight: bold
-`
-const HomeTransactionsTable = ({ resp, isLoading, request }) => {
+`;
+
+const HomeTransactionsTable = ({ resp, isLoading }) => {
   const { chain } = useContext(Store);
 
   const transactions = useMemo(() => {
@@ -118,24 +100,47 @@ const HomeTransactionsTable = ({ resp, isLoading, request }) => {
     }));
   }, [chain, resp]);
 
+  const Button = styled.a`
+    position: relative;
+  `;
+
+  const handleClick = () => {
+    // eslint-disable-next-line no-alert
+    alert('More Transactions');
+  };
+
   return (
     <>
-      <div style={{maxWidth: '59%', marginLeft: '10px', width: '100%'}}>
+      <div style={{ maxWidth: '59%', marginLeft: '10px', width: '100%' }}>
         <TableHeader>
-          <div style = {{ display: 'flex', justifyContent: 'space-between',  width: '100%' }}>
-            <TableRow className='lastest-block'>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              width: '100%',
+            }}
+          >
+            <TableRow className="lastest-block">
               <BigText>Latest Transactions</BigText>
               <Number>123,123,23</Number>
             </TableRow>
-            <div style = {{ display: 'flex', alignItems: 'center'}}>
-              <BigText>More Transactions</BigText>  
-              <FontAwesomeIconDiv>
-                <FontAwesomeIcon icon='bars'></FontAwesomeIcon>            
-              </FontAwesomeIconDiv>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <BigText>More Transactions</BigText>
+              <Button onClick={handleClick}>
+                <FontAwesomeIconDiv>
+                  <FontAwesomeIcon icon={faArrowRight} />
+                </FontAwesomeIconDiv>
+              </Button>
             </div>
           </div>
         </TableHeader>
-        <Table cols={cols} rows={transactions} isLoading={isLoading} maxWidth="40%" fontWeight="normal" />      
+        <Table
+          cols={cols}
+          rows={transactions}
+          isLoading={isLoading}
+          maxWidth="40%"
+          fontWeight="normal"
+        />
       </div>
     </>
   );

@@ -70,7 +70,7 @@ const statTitles = {
   current_price: 'Current price',
 };
 const transformMetaStats = (stats) => {
-  console.log('--------', stats)
+  console.log('--------', stats);
   if (!stats || !Object.keys(stats).length) return [];
 
   return Object.keys(stats).map((stat) => ({
@@ -93,45 +93,44 @@ const AppTopStats = () => {
 
   // TODO: May need rendering all the items as if there's no data,
   //  there's no way to show appropriate "no-data" stubs
-  
-  
+
   const metaStatsComp = [
     {
       title: 'Block Heights',
-      value:'123,456,234',
-      name: "Block Heights",
-      id: "Block Heights"
+      value: '123,456,234',
+      name: 'Block Heights',
+      id: 'Block Heights',
     },
     {
       title: 'Latest Validator',
-      value:'peX72',
-      name: "Latest Validator",
-      id: "Latest Validator"
+      value: 'peX72',
+      name: 'Latest Validator',
+      id: 'Latest Validator',
     },
     {
       title: 'Latest Proposal',
-      value:'156,345',
-      name: "Latest Proposal",
-      id: "Latest Proposal"
+      value: '156,345',
+      name: 'Latest Proposal',
+      id: 'Latest Proposal',
     },
     {
       title: 'Avarege fee',
-      value:'12.5%',
-      name: "Avarege fee",
-      id: "Avarege fee"
+      value: '12.5%',
+      name: 'Avarege fee',
+      id: 'Avarege fee',
     },
     {
       title: 'Block Time',
-      value:'7 Sec',
-      name: "Block Time",
-      id: "Block Time"
+      value: '7 Sec',
+      name: 'Block Time',
+      id: 'Block Time',
     },
     {
       title: 'Current price',
-      value:'$30',
-      name: "Current Price",
-      id: "Current"
-    },    
+      value: '$30',
+      name: 'Current Price',
+      id: 'Current',
+    },
   ];
   return (
     <TopStatsStyled>

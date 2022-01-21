@@ -3,7 +3,10 @@ import { ThemeContext } from 'styled-components';
 import ChartContainer from '../../../layouts/ChartContainer';
 import SelectPeriod from '../../SelectPeriod';
 import AreaChart from '../../chart-types/AreaChart';
-import { formatPercentValue, formatDate, formatDateWithTime,
+import {
+  formatPercentValue,
+  formatDate,
+  formatDateWithTime,
 } from '../../../utils';
 import useRequest from '../../../hooks/useRequest';
 import API from '../../../api';
@@ -25,14 +28,14 @@ const BondedRatio = () => {
   return (
     <ChartContainer
       title={chartName}
-      select={(
+      select={
         <SelectPeriod
           defaultPeriod={defaultPeriod}
           isDisabled={res.isLoading}
           onChange={res.request}
         />
-      )}
-      chart={(
+      }
+      chart={
         <AreaChart
           areaName={areaName}
           isLoading={res.isLoading}
@@ -46,7 +49,7 @@ const BondedRatio = () => {
           tooltipLabelFormatter={formatDateWithTime}
           color={color}
         />
-      )}
+      }
     />
   );
 };

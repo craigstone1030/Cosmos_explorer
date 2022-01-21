@@ -7,13 +7,11 @@ import ChartContainer from '../../../layouts/ChartContainer';
 import useRequest from '../../../hooks/useRequest';
 import API from '../../../api';
 
-
 const chartName = 'Fee ranges';
 const barName = chartName;
 const yAxisWidth = 40;
 const yAxisTickCount = 10;
 const xAxisTickCount = 10;
-
 
 const CustomTooltip = (props) => {
   // TODO: Test with null/undefined
@@ -21,14 +19,16 @@ const CustomTooltip = (props) => {
     return null;
   }
 
-  const newPayload = [...props.payload[0].payload.validators.map((validator) => ({
-    name: validator.validator,
-    value: formatPercentValue(formatNum(validator.fee * 100)),
-  })), ...props.payload];
+  const newPayload = [
+    ...props.payload[0].payload.validators.map((validator) => ({
+      name: validator.validator,
+      value: formatPercentValue(formatNum(validator.fee * 100)),
+    })),
+    ...props.payload,
+  ];
 
   return <DefaultTooltipContent {...props} payload={newPayload} />;
 };
-
 
 const FeeRanges = () => {
   const theme = useContext(ThemeContext);
@@ -39,7 +39,7 @@ const FeeRanges = () => {
 
     return resp.map((el) => ({
       // name: formatNum(el.to * 100),
-      name:  `${formatNum(el.from * 100)}-${formatNum(el.to * 100)}%`,
+      name: `${formatNum(el.from * 100)}-${formatNum(el.to * 100)}%`,
       dataPiece: el.validators ? el.validators.length : 0,
       validators: el.validators ? el.validators : [],
     }));
@@ -48,7 +48,7 @@ const FeeRanges = () => {
   return (
     <ChartContainer
       title={chartName}
-      chart={(
+      chart={
         <BarChart
           isLoading={isLoading}
           data={feeRanges}
@@ -63,7 +63,7 @@ const FeeRanges = () => {
           barName={barName}
           barColor={theme.burgundy}
         />
-      )}
+      }
     />
   );
 };

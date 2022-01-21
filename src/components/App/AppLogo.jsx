@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/img/Logo_with_type.svg';
+import logo from '../../assets/img/logo_scallop.svg';
 import Store from '../../store';
 
 const AppLogo = () => {
