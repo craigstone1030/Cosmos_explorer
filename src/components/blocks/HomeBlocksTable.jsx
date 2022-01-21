@@ -1,5 +1,6 @@
 import React, { useContext, useMemo } from 'react';
 import moment from 'moment';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 import Store from '../../store';
 import useRequest from '../../hooks/useRequest';
@@ -42,6 +43,8 @@ const HomeBlocksTable = () => {
     }));
   }, [chain, resp]);
 
+
+
 const TableHeader = styled.div`
   margin-top: 10px;
   max-width: 100%;
@@ -73,7 +76,7 @@ const Number = styled.div`
   font-weight:normal;
   margin-left: 10px;
 `
-const FontAwesomeIcon = styled.div`
+const FontAwesomeIconDiv = styled.div`
   background-color: rgb(69, 32, 230);
   border-radius: 8px;
   width: 32px;
@@ -85,6 +88,7 @@ const FontAwesomeIcon = styled.div`
   justify-content: center;
   flex-flow: row wrap;
   margin: 0 10px;
+  color: white;
 `
 const TRow = styled.div`
   align-items: center;
@@ -113,8 +117,10 @@ const Symbol = styled.div`
               <Number>123,123,23</Number>
             </TableRow>
             <div style = {{ display: 'flex', alignItems: 'center'}}>
-              <BigText>More blocks</BigText>            
-              <FontAwesomeIcon icon='arrow-alt-right'></FontAwesomeIcon>            
+              <BigText>More blocks</BigText>    
+              <FontAwesomeIconDiv>
+                <FontAwesomeIcon icon='bars'></FontAwesomeIcon>            
+              </FontAwesomeIconDiv>        
             </div>
           </div>
         </TableHeader>

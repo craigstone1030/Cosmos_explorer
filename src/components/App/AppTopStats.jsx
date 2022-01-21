@@ -97,16 +97,40 @@ const AppTopStats = () => {
   
   const metaStatsComp = [
     {
-      title: 'asdf',
-      value:'1',
-      name: "asdf",
-      id: "asdf"
+      title: 'Block Heights',
+      value:'123,456,234',
+      name: "Block Heights",
+      id: "Block Heights"
     },
     {
-      title: 'bbbbb',
-      value:'30',
-      name: "bbb",
-      id: "ddd"
+      title: 'Latest Validator',
+      value:'peX72',
+      name: "Latest Validator",
+      id: "Latest Validator"
+    },
+    {
+      title: 'Latest Proposal',
+      value:'156,345',
+      name: "Latest Proposal",
+      id: "Latest Proposal"
+    },
+    {
+      title: 'Avarege fee',
+      value:'12.5%',
+      name: "Avarege fee",
+      id: "Avarege fee"
+    },
+    {
+      title: 'Block Time',
+      value:'7 Sec',
+      name: "Block Time",
+      id: "Block Time"
+    },
+    {
+      title: 'Current price',
+      value:'$30',
+      name: "Current Price",
+      id: "Current"
     },    
   ];
   return (

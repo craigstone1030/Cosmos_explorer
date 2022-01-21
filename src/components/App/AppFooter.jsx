@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { Row, Col } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import AppLogo from './AppLogo';
 import { Container } from '../styled/CustomBsGrid';
 import Dropdown from '../styled/Dropdown';
-import Title from '../styled/Title';
 import useRoutes from './hooks/useRoutes';
 import Store from '../../store';
 
@@ -79,6 +79,7 @@ const FooterItem = styled.div`
 const P = styled.p`
   color: ${({ theme }) => theme.grey};
   font-weight: 500;
+  margin-top: 20px;
 `;
 
 const currentYear = new Date().getFullYear();
@@ -119,6 +120,14 @@ const behind = [
   },
 ];
 
+const LogoWrapper = styled.div`
+  margin-right: 75px;
+
+  @media (max-width: ${({ theme }) => theme.xlDown}) {
+    margin-right: 10px;
+  }
+`;
+
 const AppFooter = () => {
   const routes = useRoutes();
   const { chain } = useContext(Store);
@@ -130,10 +139,11 @@ const AppFooter = () => {
           <Row>
             <Col md={6} lg={3}>
               <FooterItem>
-                <Title modifiers="blue">Cosmoscan</Title>
+                <LogoWrapper>
+                  <AppLogo />
+                </LogoWrapper>
                 <P>
-                  Cosmoscan is an open-source analytics platform for Cosmos
-                  network made by Everstake.
+                  Scallop Scan is a tool for inspecting and analysing Scallop Chain Transactions.
                 </P>
               </FooterItem>
             </Col>

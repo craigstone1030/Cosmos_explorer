@@ -1,6 +1,7 @@
 import React, { useContext, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 import Table from '../reusable/Table';
 import Store from '../../store';
@@ -58,7 +59,7 @@ const Number = styled.div`
   font-weight:normal;
   margin-left: 10px;
 `
-const FontAwesomeIcon = styled.div`
+const FontAwesomeIconDiv = styled.div`
   background-color: rgb(69, 32, 230);
   border-radius: 8px;
   width: 32px;
@@ -70,6 +71,7 @@ const FontAwesomeIcon = styled.div`
   justify-content: center;
   flex-flow: row wrap;
   margin: 0 10px;
+  color: white;
 `
 const TRow = styled.div`
   align-items: center;
@@ -126,8 +128,10 @@ const HomeTransactionsTable = ({ resp, isLoading, request }) => {
               <Number>123,123,23</Number>
             </TableRow>
             <div style = {{ display: 'flex', alignItems: 'center'}}>
-              <BigText>More Transactions</BigText>            
-              <FontAwesomeIcon icon='arrow-alt-right'></FontAwesomeIcon>            
+              <BigText>More Transactions</BigText>  
+              <FontAwesomeIconDiv>
+                <FontAwesomeIcon icon='bars'></FontAwesomeIcon>            
+              </FontAwesomeIconDiv>
             </div>
           </div>
         </TableHeader>

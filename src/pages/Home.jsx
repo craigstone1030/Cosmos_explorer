@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Container } from '../components/styled/CustomBsGrid';
 import MainStats from '../components/home/MainStats';
 import MainCharts from '../components/home/MainCharts';
+import SearchBox from '../components/home/SearchBox';
 // import Banner from '../components/Banner';
 import HomeBlocksTable from '../components/blocks/HomeBlocksTable';
 import HomeTransactionsTable from '../components/transactions/HomeTransactionsTable';
@@ -31,7 +32,7 @@ const Home = () => (
     </Helmet>
 
     {/* <Banner /> */}
-
+    <SearchBox />
     <MainCharts />
     <MainStats />
     <div style={{display: 'flex'}}>
